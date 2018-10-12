@@ -1,35 +1,40 @@
+Olá, pessoal!
+------------
 
-Dependencias
-------------------------
-- fiz toda solucao usando Docker e docker-compose, utilizando linux.
-- testei somente na minha maquina (que roda ubuntu), mas acredito que 
-  rode em qualquer distribuição linux.
-- para rodar, basta instalar docker e docker compose e, entao, usar
-  o comando `./build_and_deploy.sh`
+- Toda solução foi feita com containers Docker e docker-compose.
+- Testei somente na minha máquina (que roda ubuntu), mas acredito que 
+  rode em qualquer distribuição linux e macos.
+- Para rodar, basta instalar docker e docker-compose e, entao, usar
+  o comando `./build_and_deploy.sh`. Esse script irá baixar algumas imagens do dockerhub, construir localmente as imagens das aplicações que escrevi para resolução dessa prova e rodar os containers.
 
-Implementacao da parte A
+Implementação da parte A
 ------------------------
-- requisito: dados sensiveis e nao precisa ser rapido
-- solucao adotada: banco de dados postgres que aceita somente
-  conexao segura (ssl). Os certificados sao auto-assinados. Gerei
-  eles com openssl.
-- desse modo, se alguem fizer sniff na rede, vai ver todos os dados criptografados
-- alem disso, como os dados sao muito criticos, estou guardando os dados criptografados
-  no banco de dados. desse modo, se um invasor conseguir entrar no banco ou na maquina,
-  tambem vai ver os dados criptografados. Para mim, nao ficou claro se esse nível de
-  precaução é necessário, mas acho melhor pecar pelo excesso do que pela falta de segurança.
-- aplicacao é um spring boot bem simples, e a aplicação é reponsável pela criptografia
-- para gerar certificado ssl autoassinado, usei os comandos
-```
-  openssl req -new -text -out server.req
-  openssl rsa -in privkey.pem -out server.key
-  rm privkey.pem
-  openssl req -x509 -in server.req -text -key server.key -out server.crt
-```
+- Como o principal requisito dessa parte é a segurança, meus principais cuidados foram:
+    - autenticação obrigatória para acesso ao banco de dados
+    - segurança no tráfego de dados, habilitando SSL para comunição entre aplicação e banco de dados
+    - persistência de dados criptografados (AES)
+
+- Para habilitar SSL na comunicação com banco, foram gerados certificados autoassinados com openssl.
+- Aplicação responsável por persistir e recuperar dados foi feita com um container Docker rodando Tomcat feita com Java8. É uma restful api, implementada com Spring Boot e Spring Data Rest. 
 
 - SUGESTOES DE MELHORIA:
-  - guardar as chaves e senhas de modo mais seguro com vault (guardei as chaves e senhas
-    em claro, devido ao tempo)
-  - restringir no pg_hba.conf para que somente ips confiaveis possam acessar o banco. Deixei
-    liberado porque, se voces quiserem rodar na maquina de voces, nao vai ser necessario
-    trocar o ip
+  - guardar as chaves e senhas de modo mais seguro com vault (guardei as chaves e senhas em claro, devido ao tempo)
+  - restringir no pg_hba.conf para que somente ips confiaveis possam acessar o banco. Deixei liberado porque, se voces quiserem rodar na maquina de voces, nao vai ser necessario trocar o ip
+  - validação dos dados antes de persisti-los.
+  - autenticação para os usuários da aplicação
+  - fazer testes
+ 
+- Alguns exemplos de como utilizar a aplicação A:
+- `curl -X GET http://localhost:8090/users`
+- `curl -X POST 
+  http://localhost:8090/users 
+  -H 'Content-Type: application/json' 
+  -d '{
+	"cpf": "005.117.480-43",
+	"name": "rodrigo",
+	"address": "bento 555",
+	"debts": [
+		{"description": "algo", "value": "25.00"},
+		{"description": "algo2", "value": "30.00"}
+	]
+}'`
