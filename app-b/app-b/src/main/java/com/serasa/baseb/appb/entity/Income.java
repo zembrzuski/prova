@@ -19,4 +19,12 @@ public class Income {
     private String description;
     private BigDecimal value;
 
+    public Income() {
+    }
+
+    public Income(String description, double value) {
+        this.description = description;
+        this.value = new BigDecimal(value);
+    }
+
 }

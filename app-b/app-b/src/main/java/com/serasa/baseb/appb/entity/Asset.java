@@ -1,6 +1,7 @@
 package com.serasa.baseb.appb.entity;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,7 +11,7 @@ import java.math.BigDecimal;
 
 @Entity
 @Data
-public class Asset {
+public class Asset { // bens materiais. nao sei se o nome em ingles está certo.
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -19,4 +20,11 @@ public class Asset {
     private String description;
     private BigDecimal value;
 
+    public Asset() {
+    }
+
+    public Asset(String description, double value) {
+        this.description = description;
+        this.value = new BigDecimal(value);
+    }
 }
