@@ -1,7 +1,28 @@
 server.port: 8090
+
 spring:
+  profiles:
+    active: local
+---
+spring:
+  profiles:
+    - local
   datasource:
     url: jdbc:postgresql://localhost:5432/base_a
+    username: postgres
+    password: example
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+---
+spring:
+  profiles:
+  - container
+  datasource:
+    url: jdbc:postgresql://base_a_db:5432/base_a
     username: postgres
     password: example
   jpa:

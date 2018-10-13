@@ -2,7 +2,7 @@ version: '3.1'
 
 services:
 
-  db:
+  base_a_db:
     image: serasa-base-a
     restart: always
     environment:
@@ -10,9 +10,10 @@ services:
     ports:
       - 5432:5432
 
-  adminer:
-    image: adminer
+  app_a:
+    image: app_a
     restart: always
-    ports:
-      - 8080:8080
-
+    depends_on: 
+      - base_a_db
+    ports: 
+      - 8090:8090

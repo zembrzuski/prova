@@ -15,7 +15,7 @@ Implementação da parte A
     - persistência de dados criptografados (AES)
 
 - Para habilitar SSL na comunicação com banco, foram gerados certificados autoassinados com openssl.
-- Aplicação responsável por persistir e recuperar dados foi feita com um container Docker rodando Tomcat feita com Java8. É uma restful api, implementada com Spring Boot e Spring Data Rest. 
+- Aplicação responsável por persistir e recuperar dados foi feita com um container Docker rodando Tomcat feita com Java8. É uma restful api com HATEOAS, implementada com Spring Boot e Spring Data Rest. 
 
 - SUGESTOES DE MELHORIA:
   - guardar as chaves e senhas de modo mais seguro com vault (guardei as chaves e senhas em claro, devido ao tempo)
