@@ -1,0 +1,19 @@
+version: '3.1'
+
+services:
+
+  base_a_db:
+    image: base-a-db
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
+    ports:
+      - 5432:5432
+
+  app_a:
+    image: app_a
+    restart: always
+    depends_on: 
+      - base_a_db
+    ports: 
+      - 8090:8090
