@@ -10,6 +10,7 @@ import org.springframework.data.annotation.LastModifiedDate;
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Data
 @Entity
@@ -33,12 +34,14 @@ public class Score {
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Income income;
 
-    @CreatedDate
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date createdAt;
+    public String asCsv() {
+        return age + "," + address.asCsv() + "," + income.asCsv() + "," + assetsAsCsv(assets);
+    }
 
-    @LastModifiedDate
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date updatedAt;
+    private String assetsAsCsv(List<Asset> assets) {
+        return assets.stream()
+                .map(Asset::asCsv)
+                .collect(Collectors.joining(","));
+    }
 
 }

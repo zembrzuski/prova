@@ -31,4 +31,8 @@ public class Address {
         this.country = country;
         this.zipcode = zipcode;
     }
+
+    public String asCsv() {
+        return street + ',' + city + "," + state + "," + country + zipcode;
+    }
 }

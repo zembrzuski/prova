@@ -27,4 +27,8 @@ public class Asset { // bens materiais. nao sei se o nome em ingles está certo.
         this.description = description;
         this.value = new BigDecimal(value);
     }
+
+    public String asCsv() {
+        return null;
+    }
 }

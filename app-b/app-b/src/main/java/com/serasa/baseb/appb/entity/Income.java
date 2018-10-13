@@ -17,14 +17,17 @@ public class Income {
     private long id;
 
     private String description;
-    private BigDecimal value;
+    private Double value;
 
     public Income() {
     }
 
     public Income(String description, double value) {
         this.description = description;
-        this.value = new BigDecimal(value);
+        this.value = value;
     }
 
+    public String asCsv() {
+        return description + "," + value.toString();
+    }
 }
