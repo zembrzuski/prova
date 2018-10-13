@@ -1,9 +1,13 @@
 package com.serasa.baseb.appb.entity;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.util.List;
 
-public class CreditScoreInformation {
+@Data
+@Entity
+public class ScoreInformation {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
