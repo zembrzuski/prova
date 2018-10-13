@@ -1,5 +1,16 @@
 version: '2.2'
 services:
+  app_c:
+    image: app-c
+    environment:
+      - config_path=config/container.yml
+    ports:
+      - 8888:8888
+    networks:
+      - esnet
+    depends_on:
+      - elasticsearch
+
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:6.4.2
     container_name: elasticsearch

@@ -12,7 +12,8 @@ if __name__ == '__main__':
 
     logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.INFO  )
     logging.info(config)
-
+    logging.info(config['elasticsearch']['hosts'])
+    
     elasticsearch = Elasticsearch(config['elasticsearch']['hosts'])
 
     app = web_app.create_web_app(elasticsearch)
