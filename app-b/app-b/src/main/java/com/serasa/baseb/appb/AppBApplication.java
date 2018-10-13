@@ -25,7 +25,7 @@ public class AppBApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) {
-		// poputating some information on database at startup.
+		// populating some information on database at startup.
 
 		repo.deleteAll();
 

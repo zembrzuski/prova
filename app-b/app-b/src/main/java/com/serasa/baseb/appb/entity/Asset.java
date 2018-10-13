@@ -1,7 +1,6 @@
 package com.serasa.baseb.appb.entity;
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -29,6 +28,6 @@ public class Asset { // bens materiais. nao sei se o nome em ingles está certo.
     }
 
     public String asCsv() {
-        return null;
+        return description + "," + value.toString();
     }
 }
