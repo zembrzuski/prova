@@ -21,4 +21,14 @@ public class Address {
     private String country;
     private String zipcode;
 
+    public Address() {
+    }
+
+    public Address(String street, String city, String state, String country, String zipcode) {
+        this.street = street;
+        this.city = city;
+        this.state = state;
+        this.country = country;
+        this.zipcode = zipcode;
+    }
 }
