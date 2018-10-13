@@ -10,3 +10,11 @@ services:
     ports:
       - 5431:5432
 
+  app_b:
+    image: app_b
+    restart: always
+    depends_on:
+      - base_b_db
+    ports:
+      - 8091:8091
+

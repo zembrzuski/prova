@@ -22,7 +22,7 @@ spring:
   profiles:
   - container
   datasource:
-    url: jdbc:postgresql://base_a_db:5431/base_a
+    url: jdbc:postgresql://base_b_db:5432/base_a
     username: postgres
     password: example
   jpa:
