@@ -13,9 +13,9 @@ if __name__ == '__main__':
     logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.INFO  )
     logging.info(config)
 
-    es = Elasticsearch(config['elasticsearch']['hosts'])
+    elasticsearch = Elasticsearch(config['elasticsearch']['hosts'])
 
-    app = web_app.create_web_app()
+    app = web_app.create_web_app(elasticsearch)
 
     logging.info('Backend service listening on 8888')
     app.listen(8888)
