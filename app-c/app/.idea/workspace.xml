@@ -2,30 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c388ea89-6f32-4c0f-a697-1c2de7226159" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../app-a/base_a/src/main/java/com/prova/basea/base_a/BaseAApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../app-a/base_a/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../app-a/base_a/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../app-a/base_a/src/main/java/com/serasa/basea/base_a/BaseAApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../app-a/base_a/src/main/java/com/serasa/basea/base_a/crypto/AbstractCryptoConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../app-a/base_a/src/main/java/com/prova/basea/base_a/crypto/AbstractCryptoConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../app-a/base_a/src/main/java/com/serasa/basea/base_a/crypto/CipherInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../app-a/base_a/src/main/java/com/prova/basea/base_a/crypto/CipherInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../app-a/base_a/src/main/java/com/serasa/basea/base_a/crypto/StringCryptoConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../app-a/base_a/src/main/java/com/prova/basea/base_a/crypto/StringCryptoConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../app-a/base_a/src/main/java/com/serasa/basea/base_a/domain/Debt.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../app-a/base_a/src/main/java/com/prova/basea/base_a/domain/Debt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../app-a/base_a/src/main/java/com/serasa/basea/base_a/domain/SerasaUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../app-a/base_a/src/main/java/com/prova/basea/base_a/domain/SerasaUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../app-a/base_a/src/main/java/com/serasa/basea/base_a/repository/StatusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../app-a/base_a/src/main/java/com/prova/basea/base_a/repository/StatusController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../app-a/base_a/src/main/java/com/serasa/basea/base_a/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../app-a/base_a/src/main/java/com/prova/basea/base_a/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../app-b/app-b/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../app-b/app-b/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../app-b/app-b/src/main/java/com/serasa/baseb/appb/AppBApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../app-b/app-b/src/main/java/com/prova/baseb/appb/AppBApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../app-b/app-b/src/main/java/com/serasa/baseb/appb/controller/ScoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../app-b/app-b/src/main/java/com/prova/baseb/appb/controller/ScoreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../app-b/app-b/src/main/java/com/serasa/baseb/appb/controller/Serializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../app-b/app-b/src/main/java/com/prova/baseb/appb/controller/Serializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../app-b/app-b/src/main/java/com/serasa/baseb/appb/controller/StatusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../app-b/app-b/src/main/java/com/prova/baseb/appb/controller/StatusController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../app-b/app-b/src/main/java/com/serasa/baseb/appb/entity/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../app-b/app-b/src/main/java/com/prova/baseb/appb/entity/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../app-b/app-b/src/main/java/com/serasa/baseb/appb/entity/Asset.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../app-b/app-b/src/main/java/com/prova/baseb/appb/entity/Asset.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../app-b/app-b/src/main/java/com/serasa/baseb/appb/entity/Income.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../app-b/app-b/src/main/java/com/prova/baseb/appb/entity/Income.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../app-b/app-b/src/main/java/com/serasa/baseb/appb/entity/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../app-b/app-b/src/main/java/com/prova/baseb/appb/entity/Score.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../app-b/app-b/src/main/java/com/serasa/baseb/appb/repository/ScoreRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../app-b/app-b/src/main/java/com/prova/baseb/appb/repository/ScoreRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../app-b/app-b/src/test/java/com/serasa/baseb/appb/AppBApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../app-b/app-b/src/test/java/com/prova/baseb/appb/AppBApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/cpf_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/cpf_handler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-and-deploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../build-and-deploy.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +55,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web_app.py">
           <provider selected="true" editor-type-id="text-editor">
             <state>
@@ -102,7 +79,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/handlers/last_purchase.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
@@ -137,8 +114,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="150" column="61" selection-start-line="150" selection-start-column="61" selection-end-line="150" selection-end-column="61" />
+            <state relative-caret-position="-1680">
+              <caret line="11" column="27" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="27" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -487,13 +464,6 @@
     <entry file="file://$PROJECT_DIR$/handlers/schemas.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/handlers/status_handler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/yaml_loader.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -501,30 +471,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="150" column="61" selection-start-line="150" selection-start-column="61" selection-end-line="150" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/schema.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#172#221#0" expanded="true" />
-            <marker date="1539547798691" expanded="true" signature="273:278" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -552,6 +502,33 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handlers/status_handler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1680">
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#172#221#0" expanded="true" />
+            <marker date="1539547798691" expanded="true" signature="273:278" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
