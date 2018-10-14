@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+
+  app_a:
+    image: app_a
+    restart: always
+    ports: 
+      - 8090:8090
+
+  app_b:
+    image: app_b
+    restart: always
+    ports: 
+      - 8091:8091
+
