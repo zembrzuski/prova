@@ -5,6 +5,9 @@
 - Testei somente na minha máquina (que roda ubuntu), mas acredito que rode em qualquer distribuição linux e macos.
 - Para rodar, basta instalar docker e docker-compose e, entao, usar o comando `./build_and_deploy.sh`. Esse script irá baixar algumas imagens do dockerhub, construir localmente as imagens das aplicações que escrevi para resolução dessa prova e rodar os containers.
 
+![alt text](arquitetura.png)
+
+
 ## Parte A
 ------------------------
 - Como o principal requisito dessa parte é a segurança, meus principais cuidados foram:
