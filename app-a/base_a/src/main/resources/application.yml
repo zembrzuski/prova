@@ -31,3 +31,17 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
+---
+spring:
+  profiles:
+  - aws
+  datasource:
+    url: jdbc:postgresql://prova-db.c1u3yzfg4dgd.sa-east-1.rds.amazonaws.com:5432/base_a?ssl=true
+    username: postgres
+    password: gr3m1oc4mpea0
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update

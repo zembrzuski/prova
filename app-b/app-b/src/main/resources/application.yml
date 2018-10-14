@@ -1,4 +1,5 @@
 server.port: 8091
+spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation: true
 
 spring:
   profiles:
@@ -25,6 +26,20 @@ spring:
     url: jdbc:postgresql://base_b_db:5432/base_a
     username: postgres
     password: example
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+---
+spring:
+  profiles:
+  - aws
+  datasource:
+    url: jdbc:postgresql://prova-db.c1u3yzfg4dgd.sa-east-1.rds.amazonaws.com:5432/base_b?ssl=true
+    username: postgres
+    password: gr3m1oc4mpea0
   jpa:
     properties:
       hibernate:
