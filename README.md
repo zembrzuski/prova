@@ -69,6 +69,7 @@
 * Sugestões de melhoria:
     * Para rápida inserção de dados, pode-se utilizar a bulk api do elasticsearch, que faz inserção em lotes. 
     * Inserção de dados de forma assíncrona pode evitar gargalos. Para isso, uma solução com Apache Kafka ficaria ótima.
+    * Validação do schema
 
 #### Como utilizar a parte C
 * Dados de um determinado do usuário cujo CPF é 1111111111: `curl -X GET http://ec2-18-228-30-214.sa-east-1.compute.amazonaws.com:8888/cpf/11111111111/`
