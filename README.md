@@ -21,9 +21,9 @@
     * Utilizar RDS da Amazon.
 
 #### Como utilizar a parte A 
-* Listagem da primeira página de usuários curl -X GET http://ec2-18-228-30-214.sa-east-1.compute.amazonaws.com:8090/users 
+* Listagem da primeira página de usuários `curl -X GET http://ec2-18-228-30-214.sa-east-1.compute.amazonaws.com:8090/users `
 
-* Listagem da segunda página de usuários curl -X GET 'http://ec2-18-228-30-214.sa-east-1.compute.amazonaws.com:8090/users?size=2&page=1' 
+* Listagem da segunda página de usuários `curl -X GET 'http://ec2-18-228-30-214.sa-east-1.compute.amazonaws.com:8090/users?size=2&page=1' `
 
 * Exemplo de inserção de dados na base
 `curl -X POST 
