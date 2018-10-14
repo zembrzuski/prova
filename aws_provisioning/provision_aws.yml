@@ -1,0 +1,60 @@
+# linhas que podem ser uteis quando for provisionar na amazon.
+# ansible-playbook -i inventory provision_aws.yml
+#
+- name: Provision master
+  hosts: aws
+  remote_user: ubuntu
+  become: yes
+  become_method: sudo
+  gather_facts: no
+
+  tasks:
+  - name:  install 1
+    apt:
+      name: "apt-transport-https"
+      state: "present"
+
+  - name: intstall 2
+    apt:
+      name: "ca-certificates"
+      state: "present"
+
+  - name: intstall curl
+    apt:
+      name: "curl"
+      state: "present"
+
+  - name: install common
+    apt:
+      name: "software-properties-common"
+      state: "present"
+
+  - name: "Add Docker’s official GPG key:"
+    shell: "curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -"
+
+  - name: "add apt repo"
+    shell: sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+  - name: "install docker ce"
+    apt:
+      name: docker-ce
+      update_cache: yes
+
+  - name: "create docker group"
+    group:
+        name: docker
+        state: present
+
+  - name: "add vagrant user to docker group"
+    shell: sudo usermod -aG docker ubuntu
+
+  - name: "install docker compose 1"
+    shell: sudo curl -L https://github.com/docker/compose/releases/download/1.20.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+
+  - name: "set docker compose permission"
+    shell: "sudo chmod +x /usr/local/bin/docker-compose"
+
+  - name: "git"
+    apt:
+      name: git
+
