@@ -4,8 +4,6 @@ import json
 
 class CpfHandler(tornado.web.RequestHandler):
 
-    # "2015/01/01 12:10:30".
-
     def initialize(self, *args, **kwargs):
         self.elasticsearch = kwargs['elasticsearch']
 
