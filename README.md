@@ -72,8 +72,8 @@
 
 #### Como utilizar a parte C
 * Dados de um determinado do usuário cujo CPF é 1111111111: `curl -X GET http://ec2-18-228-30-214.sa-east-1.compute.amazonaws.com:8888/cpf/11111111111/`
-* Movimentações financeiras do usuário cujo CPF é 1111111111: curl -X GET http://ec2-18-228-30-214.sa-east-1.compute.amazonaws.com:8888/finance-movement/11111111111/ 
-* Última compra do usuário cujo CPF é 1111111111: curl -X GET http://ec2-18-228-30-214.sa-east-1.compute.amazonaws.com:8888/last-purchase/11111111111/ 
+* Movimentações financeiras do usuário cujo CPF é 1111111111: `curl -X GET http://ec2-18-228-30-214.sa-east-1.compute.amazonaws.com:8888/finance-movement/11111111111/ `
+* Última compra do usuário cujo CPF é 1111111111: `curl -X GET http://ec2-18-228-30-214.sa-east-1.compute.amazonaws.com:8888/last-purchase/11111111111/ `
 * Inserção de uma consulta de cpf num bureau de crédito: `curl -X POST 
   http://ec2-18-228-30-214.sa-east-1.compute.amazonaws.com:8888/cpf/11111111111 
   -H 'Content-Type: application/json' 
